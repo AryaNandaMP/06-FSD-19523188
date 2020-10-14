@@ -17,17 +17,20 @@ mean(dataCredit$Cards)
 median(dataCredit$Rating)
 median(dataCredit$Age)
 median(dataCredit$Cards)
-#nomor 2. Compute the mode of Gender, Student, and Married
+
+#no.2. Compute the mode of Gender, Student, and Married
 modeOf(dataCredit$Gender)
 modeOf(dataCredit$Student)
 modeOf(dataCredit$Married)
-#no. 3. Compute the sample 10, 37, and 91 percentiles of Education
-quantile(x = dataCredit$Education, probs = 0.1)
+
+#no.3. Compute the sample 10, 37, and 91 percentiles of Education
+quantile(x = dataCredit$Education, probs = 0.10)
 quantile(x = dataCredit$Education, probs = 0.37)
 quantile(x = dataCredit$Education, probs = 0.91)
 #no. 4. Compute the quartiles of Balance and its corresponding boxplot
-quantile(x = dataCredit$Balance, c(0.25, 0.50, 0.75))
-boxplot(dataCredit$Balance, horizontal = TRUE)
+quantile(x = dataCredit$Balance, probs = c(0.25, 0.50, 0.75))
+#boxplot of balance quartile
+boxplot(dataCredit$Balance)
 #no. 5. Compute the correlation and the scatter plot between pairs of Limit and Rating, Age and Card, Income and Education
 LimitxRating <- data.frame(limit = dataCredit$Limit, rating = dataCredit$Rating)
 LimitxRating
